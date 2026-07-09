@@ -1,0 +1,46 @@
+CREATE DATABASE student_management;
+
+
+USE student_management;
+
+
+CREATE TABLE users(
+
+id INT AUTO_INCREMENT PRIMARY KEY,
+
+username VARCHAR(50),
+
+password VARCHAR(255),
+
+role VARCHAR(20)
+
+);
+
+
+
+INSERT INTO users
+(username,password,role)
+VALUES
+('admin','12345','Admin');
+
+
+
+CREATE TABLE students(
+
+student_id INT AUTO_INCREMENT PRIMARY KEY,
+
+name VARCHAR(100),
+
+email VARCHAR(100),
+
+department VARCHAR(50),
+
+year VARCHAR(20),
+
+course VARCHAR(50),
+
+attendance INT,
+
+cgpa FLOAT
+
+);
