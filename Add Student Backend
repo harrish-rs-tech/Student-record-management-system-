@@ -1,0 +1,34 @@
+<?php
+
+include "config.php";
+
+
+$name=$_POST['name'];
+$email=$_POST['email'];
+$department=$_POST['department'];
+$year=$_POST['year'];
+$course=$_POST['course'];
+
+
+$sql="INSERT INTO students
+(name,email,department,year,course)
+VALUES
+('$name','$email','$department','$year','$course')";
+
+
+if(mysqli_query($conn,$sql))
+{
+
+echo "Student Added Successfully";
+
+}
+
+else
+{
+
+echo "Error";
+
+}
+
+
+?>
